@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/logo-mini.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Voar em Louvor</title>
-  <link rel="icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header id="topo">
-    <h1>🕊️ Voar em Louvor</h1>
-    <p>Música, fé e inspiração para elevar o espírito</p>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#videos">Vídeos</a>
-      <a href="#cifras">Cifras</a>
-      <a href="#contato">Contato</a>
+  <header class="topo">
+    <div class="logo">
+      <img src="img/logo-mini.png" class="logo-header" alt="Logo">
+      <span class="logo-texto">Voar em Louvor</span>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html" class="ativo">Início</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="cifras.html">Cifras</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre o Projeto</h2>
-    <p>O <strong>Voar em Louvor</strong> nasceu do desejo de compartilhar canções católicas que tocam o coração e aproximam de Deus. Criado por Alexandre Chain e Guilherme, o projeto reúne músicas, vídeos e cifras dedicadas à adoração e à comunhão.</p>
-  </section>
-
-  <section id="videos">
-    <h2>🎥 Vídeos</h2>
-    <div class="videos-container">
-      <div class="video">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/RZzFx4OqGgc" frameborder="0" allowfullscreen></iframe>
-        <p>🎵 Tua Presença – Fernandinho</p>
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <h1>Louvor, fé e missão.</h1>
+        <p>
+          Projeto musical católico criado por <strong>Alexandre Chain</strong> e
+          <strong>Guilherme Barroso</strong>, dedicado a anunciar o Evangelho por meio da música,
+          vídeos e partilha de cifras.
+        </p>
+        <div class="hero-botoes">
+          <a href="videos.html" class="btn primario">Ver vídeos</a>
+          <a href="cifras.html" class="btn secundario">Ver cifras</a>
+        </div>
       </div>
-
-      <div class="video">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/buKjijmV-Sc" frameborder="0" allowfullscreen></iframe>
-        <p>🎵 A Casa É Sua – Casa Worship</p>
+      <div class="hero-destaque">
+        <div class="hero-card">
+          <p class="hero-card-titulo">Música como oração</p>
+          <p class="hero-card-texto">
+            Um espaço para quem deseja rezar cantando e servir melhor nas celebrações.
+          </p>
+        </div>
       </div>
+    </section>
 
-      <div class="video">
-        <iframe width="360" height="215" src="https://www.youtube.com/embed/eDj5nK7b1Xk" frameborder="0" allowfullscreen></iframe>
-        <p>🎵 Ninguém Explica Deus – Preto no Branco</p>
+    <section class="sobre">
+      <h2>Sobre o projeto</h2>
+      <p>
+        <strong>Voar em Louvor</strong> nasceu no ambiente de Igreja, no serviço de músicos que
+        desejam ir além das paredes do templo. Aqui reunimos conteúdo católico em forma de
+        canções, vídeos e cifras para apoiar ministérios de música, grupos de oração e
+        qualquer pessoa que busca se aproximar de Deus através do louvor.
+      </p>
+    </section>
+
+    <section class="chamada">
+      <h2>Para quem é este site?</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Músicos da Igreja</h3>
+          <p>Quem serve na liturgia, grupos de oração, ministérios e pastorais de música.</p>
+        </div>
+        <div class="card">
+          <h3>Quem ama louvar</h3>
+          <p>Quem encontra em cada canção uma forma de oração e encontro com Deus.</p>
+        </div>
+        <div class="card">
+          <h3>Quem está começando</h3>
+          <p>Catequistas, jovens e iniciantes no violão que precisam de cifras e referências.</p>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
     </div>
-  </section>
-
-  <section id="cifras">
-    <h2>🎸 Cifras</h2>
-
-    <div class="cifra">
-      <h3>Tua Presença – Fernandinho</h3>
-      <pre>
-Tom: D
-
-[D] Eu posso até estar aflito
-[G] Mas nunca derrotado
-[Bm] Eu posso até chorar
-[A] Mas a alegria vem de manhã
-      </pre>
-    </div>
-
-    <div class="cifra">
-      <h3>A Casa É Sua – Casa Worship</h3>
-      <pre>
-Tom: G
-
-[G] Essa casa é Sua casa
-[C] Nós deixamos ela pra Você, Jesus
-      </pre>
-    </div>
-  </section>
-
-  <footer id="contato" role="contentinfo">
-    <h2>📞 Contato</h2>
-    <address>
-      <strong>Alexandre Chain</strong><br>
-      <a href="mailto:alexandre.chain@hotmail.com">alexandre.chain@hotmail.com</a>
-    </address>
-    <p>© 2025 — Voar em Louvor</p>
+    <p class="rodape-copy">© 2025 — Voar em Louvor</p>
   </footer>
 </body>
 </html>

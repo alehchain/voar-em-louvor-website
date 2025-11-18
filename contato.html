@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" type="image/png" href="img/logo-mini.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Voar em Louvor</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topo">
+    <div class="logo">
+      <img src="img/logo-mini.png" class="logo-header" alt="Logo">
+      <span class="logo-texto">Voar em Louvor</span>
+    </div>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="cifras.html">Cifras</a>
+      <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+  </header>
+
+  <section class="contato-section">
+    <h2>Entre em Contato</h2>
+    <p>Preencha o formulário abaixo. Retornarei o mais breve possível.</p>
+
+    <form class="contato-form" action="https://formsubmit.co/alexandre.chain@hotmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://alehchain.github.io/voar-em-louvor-website/obrigado.html">
+
+      <label for="nome">Nome:</label>
+      <input id="nome" type="text" name="nome" placeholder="Seu nome" required>
+
+      <label for="email">Email:</label>
+      <input id="email" type="email" name="email" placeholder="Seu email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+    </div>
+    <p class="rodape-copy">© 2025 — Voar em Louvor</p>
+  </footer>
+</body>
+</html>

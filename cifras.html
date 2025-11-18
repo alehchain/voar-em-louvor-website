@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="icon" type="image/png" href="img/logo-mini.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cifras • Voar em Louvor</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    .cifras-busca {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+    .cifras-busca .search-wrapper {
+      position: relative;
+    }
+    .cifras-busca .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+    .cifras-busca .search-box {
+      width: 100%;
+      padding: 0.6rem 0.9rem 0.6rem 2.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <div class="logo">
+      <img src="img/logo-mini.png" class="logo-header" alt="Logo">
+      <span class="logo-texto">Voar em Louvor</span>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="cifras.html" class="ativo">Cifras</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="pagina-titulo">
+      <h1>Cifras</h1>
+      <p>Cifras simples para ajudar nas missas, grupos e momentos de oração.</p>
+    </section>
+
+    <section class="cifras-busca">
+      <div class="search-wrapper">
+        <i class="fa fa-search search-icon" aria-hidden="true"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar música..."
+          class="search-box"
+        >
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("searchInput");
+        input.addEventListener("keyup", function () {
+          let filtro = this.value.toLowerCase();
+          document.querySelectorAll(".cifra-card").forEach(function (card) {
+            let titulo = card.querySelector("h2").innerText.toLowerCase();
+            card.style.display = titulo.includes(filtro) ? "" : "none";
+          });
+        });
+      });
+    </script>
+
+    <section class="cifras-lista">
+
+      <article class="cifra-card">
+        <h2>Eis me Aqui - Colo de Deus</h2>
+        <p class="tom">Tom: G</p>
+<pre>
+    G              D/F#
+Senhor hoje eu me rendo
+                  Em
+Eu reconheço que nada eu posso
+       C
+Fazer sem ti
+                    G
+Então seja tudo em mim
+                     D/F#
+Dependente eu quero ser
+          Em    C
+Do teu espírito
+
+[Segunda Parte]
+
+                     Em
+Pra que quando eu falar que seja você
+             D/F#
+No meu caminhar que seja você
+                G/B
+E quando eu cantar que seja Você
+            C
+Que seja você
+
+            Em
+E no meu olhar que seja o Teu olhar
+              D/F#
+No toque das minhas
+
+Mãos que sejam as tuas 
+Bm                            
+   Se não for pra viver assim
+           C
+Eu nem quero viver    
+
+[Refrão]
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                         C
+Enche-me de ti até transbordar
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                            C
+Enche-me de ti até transbordar
+
+[Segunda Parte]
+
+                     Em
+Pra que quando eu falar que seja você
+             D/F#
+No meu caminhar que seja você
+                G/B
+E quando eu cantar que seja Você
+            C
+Que seja você
+
+            Em
+E no meu olhar que seja o Teu olhar
+              D/F#
+No toque das minhas
+
+Mãos que sejam as tuas 
+Bm                            
+   Se não for pra viver assim
+           C
+Eu nem quero viver    
+
+[Refrão]
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                         C
+Enche-me de ti até transbordar
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                            C
+Enche-me de ti até transbordar
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                         C
+Enche-me de ti até transbordar
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                            C
+Enche-me de ti até transbordar
+
+[Solo] G  D/F#  Em  C
+       G  D/F#  Em  C
+
+[Refrão]
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                         C
+Enche-me de ti até transbordar
+
+G               D/F#
+Eis-me aqui senhor
+                                Em
+Dá-me um coração semelhante ao teu
+                            C
+Enche-me de ti até transbordar
+
+[Final] G  D/F#  Em  C
+</pre>
+      </article>
+
+      <article class="cifra-card">
+        <h2>Rainha da Paz (Frei Gilson Som do Monte)</h2>
+        <p class="tom">Tom: G</p>
+<pre>
+[Intro] D  Am  C  G
+        D  Am  C  G
+
+G                      D
+Prostrado aos seus pés
+           Am               C
+Venho pedir a sua intercessão
+G                   D
+  Eu vim te encontrar
+           Am                     C
+E entregar a minha vida em suas mãos
+Em                          C
+  Mãe, me ajuda, vem me socorrer
+                          G
+Tô precisando tanto de você
+                          D
+Eu busco a cura e libertação
+Am                                C
+  Eu quero me alimentar da comunhão
+                           G
+Abastecer a alma e o coração
+       Am          C     D
+E de joelhos renovar a fé
+
+[Refrão]
+
+    G         D
+Oh, mãe de Deus
+    Am           C
+Rainha da paz, escute um filho seu
+    G         D
+Oh, mãe de Deus
+   Am            C                        G
+Rainha da paz, escute um filho seu, que sou eu
+
+( Am  C  G  Am  C  G )
+
+G                       D
+Prostrado aos seus pés
+           Am               C
+Venho pedir a sua intercessão
+G                   D
+  Eu vim te encontrar
+         Am                   C
+E entregar a minha vida em suas mãos
+Em                          C
+  Mãe, me ajuda, vem me socorrer
+                          G
+Tô precisando tanto de você
+                          D
+Eu busco a cura e libertação
+Am                                C
+  Eu quero me alimentar da comunhão
+                           G
+Abastecer a alma e o coração
+       Am          C     D
+E de joelhos renovar a fé
+
+[Refrão]
+
+    G     D
+Oh, mãe de Deus
+   Am              C
+Rainha da paz, escute um filho seu
+    G     D
+Oh, mãe de Deus
+   Am              C                     Am
+Rainha da paz, escute um filho seu, que sou eu
+
+( Am  C  G  D )
+( Am  C  G  D )
+
+[Refrão]
+
+    G     D
+Oh, mãe de Deus
+   Am              C
+Rainha da paz, escute um filho seu
+    G     D
+Oh, mãe de Deus
+   Am              C                      G
+Rainha da paz, escute um filho seu, que sou eu
+
+</pre>
+      </article>
+
+      <article class="cifra-card">
+        <h2>Eu Seguirei (Frei Gilson som do monte) Guitarra Cover</h2>
+        <p class="tom">Tom: E</p>
+<pre>
+[Primeira Parte]
+
+    E      D2
+Eu vou deixar-me guiar
+                          E
+E me abandonar no teu querer
+    D2
+Preciso fazer a Tua vontade
+          E
+Em minha vida
+
+           D2
+Eu vou deixar-me guiar
+                          E
+E me abandonar no teu querer
+    D2
+Preciso fazer a Tua vontade
+          E
+Em minha vida
+
+[Pré-Refrão]
+
+               F#m7(11)  A2
+Para onde eu irei?
+               E9
+Em quem me apoiarei?
+               F#m7(11)  A2
+Para onde eu irei?
+               E9
+Em quem me apoiarei?
+
+[Refrão]
+
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+              F#m7(11)  A2
+Tua graça me basta
+
+                E9
+Teu amor me sustenta
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+
+( F#m7(11)  A2  E9 )
+( F#m7(11)  A2  E9 )
+
+[Tab - Intro]
+
+Parte 1 de 4
+E|-----------------------------------------------------|
+B|-10-10-10-10-10-10-10-10/14-14-14-14-14-14-14-14-14--|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 2 de 4
+E|-----------------------------------------------------|
+B|-\9-9-9-9-9-9-9-9-9--7-7-7-7--7-7-7-7/10-10-10-10-10-|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 3 de 4
+E|-----------------------------------------------------|
+B|-10-10-10-10/14-14-14-14-14-14-14-14-14\9-9-9-9-9----|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 4 de 4
+E|-----------------------------------------------------|
+B|-9-9-9-9--9-9-9-9--9-9-9-9--9------------------------|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+[Primeira Parte]
+
+    E      D2
+Eu vou deixar-me guiar
+                          E
+E me abandonar no teu querer
+    D2
+Preciso fazer a Tua vontade
+          E
+Em minha vida
+
+[Pré-Refrão]
+
+               F#m7(11)  A2
+Para onde eu irei?
+               E9
+Em quem me apoiarei?
+               F#m7(11)  A2
+Para onde eu irei?
+               E9
+Em quem me apoiarei?
+
+[Refrão]
+
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+
+( A2  C#m  B4 )
+( A2  C#m  B4 )
+
+[Tab - Solo 1]
+
+Parte 1 de 4
+E|-----------------------------------------------------|
+B|-10-10-10-10--10-10-10-10/14-14-14-14-14-14-14-14-14-|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 2 de 4
+E|-----------------------------------------------------|
+B|-\12-12-12-12-12-12-12-12-12/7-7-7-7-7-7-7-7-7/10----|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 3 de 4
+E|-----------------------------------------------------|
+B|-10-10-10-10-10-10-10-10/14-14-14-14-14-14-14-14-14--|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 4 de 4
+E|-----------------------------------------------------|
+B|-\12-12-12-12-12--12-12-12-12/7-7-7-7-7-7-7-7-7/10---|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+[Ponte]
+
+               A2
+Eu te seguirei
+               C#m
+Eu te seguirei
+            B4  F#m7(11)/C#
+Eu te seguirei
+               A2
+Eu te seguirei
+               E
+Eu te seguirei
+            B4  C#m
+Eu te seguirei
+
+               A2
+Eu te seguirei
+               C#m
+Eu te seguirei
+            B4  F#m7(11)/C#
+Eu te seguirei
+               A2
+Eu te seguirei
+               E
+Eu te seguirei
+               B4
+Eu te seguirei
+
+( F#m7(11)  A2  E9 )
+
+[Tab - Solo 2]
+
+Parte 1 de 2
+E|-----------------------------------------------------|
+B|-10-10-10-10-10-10-10-10/14-14-14-14-14-14-14-14-14--|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+Parte 2 de 2
+E|-----------------5-5--7-7-9-9--11-11-12-12-----------|
+B|-\5-5-5-7-7--9-9----------------------------12~------|
+G|-----------------------------------------------------|
+D|-----------------------------------------------------|
+A|-----------------------------------------------------|
+E|-----------------------------------------------------|
+
+[Refrão]
+
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+         B4
+Eu seguirei
+     A9                 E9
+Eu irei aonde fores Senhor
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+              F#m7(11)  A2
+Tua graça me basta
+                E9
+Teu amor me sustenta
+
+[Final] F#m7(11) A2 E9
+</pre>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-conteudo">
+    </div>
+    <p class="rodape-copy">© 2025 — Voar em Louvor</p>
+  </footer>
+</body>
+</html>

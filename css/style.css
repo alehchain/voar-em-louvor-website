@@ -1,0 +1,899 @@
+
+
+.logo-header {
+  height: 24px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.logo-texto {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fbbf24; /* dourado */
+  text-shadow: 0 0 6px rgba(251, 191, 36, 0.4);
+  letter-spacing: 0.03em;
+}
+
+
+.logo:active,
+.logo:focus,
+.logo-texto:focus {
+  outline: none !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+
+.logo-icone {
+  pointer-events: none;
+}
+
+/* Tema escuro */
+
+:root {
+  --bg: #050509;
+  --bg-elevado: #101018;
+  --bg-card: #151521;
+  --borda-card: #26263a;
+  --accent: #fbbf24;
+  --accent-soft: rgba(251, 191, 36, 0.1);
+  --texto: #e5e7eb;
+  --texto-suave: #9ca3af;
+  --perigo: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #111827 0, #020617 45%, #000000 100%);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabeçalho */
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(15,23,42,0.95));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.6rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: default;
+}
+
+.logo-icone {
+  font-size: 1.4rem;
+}
+
+.logo-header {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.logo-texto {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fbbf24; /* dourado */
+  text-shadow: 0 0 6px rgba(251, 191, 36, 0.4);
+  letter-spacing: 0.03em;
+}
+
+.logo:hover .logo-texto {
+  color: #ffd000;
+  text-shadow:
+      0 0 4px rgba(255, 208, 0, 0.9),
+      0 0 8px rgba(255, 208, 0, 0.7),
+      0 0 12px rgba(255, 208, 0, 0.5);
+  transition: 0.2s ease-in-out;
+}
+
+.logo:hover .logo-icone {
+  color: inherit;       /* mantém a cor normal */
+  text-shadow: none;    /* impede brilhar */
+}
+
+.menu a {
+  color: var(--texto-suave);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  transition: all 0.18s ease;
+}
+
+.menu a:hover {
+  color: var(--texto);
+  background-color: rgba(148, 163, 184, 0.18);
+}
+
+.menu a.ativo {
+  color: #020617;
+  background: var(--accent);
+}
+
+/* Layout principal */
+
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.2rem 3.5rem;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hero-texto h1 {
+  font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
+  margin-bottom: 0.9rem;
+}
+
+.hero-texto p {
+  color: var(--texto-suave);
+  line-height: 1.5;
+  max-width: 34rem;
+}
+
+.hero-botoes {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn.primario {
+  background: var(--accent);
+  color: #020617;
+}
+
+.btn.primario:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn.secundario {
+  background: transparent;
+  color: var(--accent);
+  border-color: rgba(249, 250, 251, 0.14);
+}
+
+.btn.secundario:hover {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.hero-destaque {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-card {
+  background: radial-gradient(circle at top left, rgba(251, 191, 36, 0.12), #020617 60%);
+  border-radius: 1.4rem;
+  padding: 1.6rem 1.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+}
+
+.hero-card-titulo {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.hero-card-texto {
+  color: var(--texto);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Seções genéricas */
+
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.sobre p {
+  color: var(--texto-suave);
+  line-height: 1.6;
+  max-width: 50rem;
+}
+
+/* Cards de chamada */
+
+.chamada .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.3rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  padding: 1.3rem 1.1rem;
+  border: 1px solid var(--borda-card);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.75);
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Páginas internas */
+
+.pagina-titulo {
+  margin-bottom: 1.8rem;
+}
+
+.pagina-titulo h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.pagina-titulo p {
+  color: var(--texto-suave);
+}
+
+/* Vídeos */
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.video-card {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--borda-card);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.75);
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.video-card p {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+/* Cifras */
+
+.cifras-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.cifra-card {
+  background: var(--bg-card);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--borda-card);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.75);
+}
+
+.cifra-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.cifra-card .tom {
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.cifra-card pre {
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  background: #020617;
+  color: var(--texto);
+  border-radius: 0.7rem;
+  padding: 0.85rem;
+  overflow-x: auto;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+/* Rodapé */
+
+.rodape {
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 1.8rem 1.2rem 2rem;
+  background: radial-gradient(circle at top, #020617, #000000);
+}
+
+.rodape-conteudo {
+  max-width: 1100px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.rodape h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.rodape p {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.rodape a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+}
+
+.rodape-copy {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Responsivo */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .hero-destaque {
+    justify-content: flex-start;
+  }
+  .videos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cifras-lista {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .menu a {
+    margin-left: 0;
+    margin-right: 0.4rem;
+  }
+  main {
+    padding-inline: 1rem;
+  }
+  .hero {
+    margin-bottom: 2.2rem;
+  }
+  .chamada .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .videos-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.search-box{width:100%;padding:12px 15px;margin:20px 0;border-radius:8px;border:1px solid var(--borda-card);background:var(--bg-card);color:var(--texto);} .search-box::placeholder{color:var(--texto-suave);} 
+
+
+/* Remove underline roxo e foco */
+.logo,
+.logo:link,
+.logo:visited,
+.logo:hover,
+.logo:active,
+.logo-texto {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+}
+.logo:focus,
+.logo-texto:focus {
+    outline: none !important;
+    border: none !important;
+    text-decoration: none !important;
+}
+.logo {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Novo Rodapé Moderno */
+.rodape {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 40px 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.rodape-conteudo {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.rodape-col h4 {
+  margin-bottom: 10px;
+}
+
+.rodape-col a {
+  color: #ffd000;
+  text-decoration: none;
+}
+
+.rodape-col a:hover {
+  text-decoration: underline;
+}
+
+.rodape-copy {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Página Contato */
+.contato-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contato-form button {
+  padding: 12px;
+  background: #ffd000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* Página Contato - estilo suave e minimalista */
+.contato-section {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  color: #e6e6e6;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.contato-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contato-section p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.contato-form input,
+.contato-form textarea {
+  background: #111;
+  border: 1px solid #333;
+  color: #f2f2f2;
+  transition: 0.2s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.contato-form button {
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.contato-form button:hover {
+  background: #555;
+}
+
+
+
+/* --- CONTATO CLEAN & PREMIUM --- */
+.contato-section {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #121212;
+  border-radius: 16px;
+  color: #e0e0e0;
+  box-shadow: 0 0 25px rgba(0,0,0,0.45);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.contato-section h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contato-section p {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.contato-form label {
+  font-weight: 500;
+  opacity: 0.85;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  background: #1d1d1d;
+  border: 1px solid #333;
+  padding: 12px;
+  border-radius: 10px;
+  color: #f0f0f0;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #ffd000;
+  outline: none;
+  background: #262626;
+}
+
+.contato-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contato-form button {
+  margin-top: 15px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #ffd000;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato-form button:hover {
+  background: #e6c200;
+  transform: scale(1.03);
+}
+
+
+
+/* Campos maiores e mais suaves */
+.contato-form input,
+.contato-form textarea {
+  background: #1a1a1a;
+  border: 1px solid #444;
+  padding: 16px;
+  border-radius: 12px;
+  color: #f5f5f5;
+  font-size: 17px;
+}
+
+.contato-form textarea {
+  min-height: 180px;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #bbbbbb;
+  background: #222;
+}
+
+.contato-section {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+
+/* Campos mais largos e cores mais suaves */
+.contato-section {
+  max-width: 750px;
+  background: #f4f4f4;
+  color: #222;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 18px rgba(0,0,0,0.25);
+}
+
+.contato-section h2 {
+  color: #111;
+}
+
+.contato-form input,
+.contato-form textarea {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #222;
+  padding: 18px;
+  font-size: 17px;
+  width: 100%;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #999;
+  background: #fdfdfd;
+}
+
+
+
+/* --- Estilo escuro sofisticado --- */
+.contato-section {
+  background: #1b1b1b;
+  border: 1px solid #2b2b2b;
+  color: #e8e8e8;
+  max-width: 750px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.contato-section h2 {
+  color: #ffffff;
+}
+
+.contato-form input,
+.contato-form textarea {
+  background: #2b2b2b;
+  border: 1px solid #3a3a3a;
+  color: #f1f1f1;
+  padding: 18px;
+  font-size: 17px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
+  color: #bfbfbf;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #777;
+  background: #333;
+}
+
+
+
+/* Reduzindo altura geral da seção de contato */
+.contato-section {
+  padding: 25px 35px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px;
+  font-size: 16px;
+}
+
+.contato-form textarea {
+  min-height: 110px;
+}
+
+
+
+/* ----------------------------
+   ÁREA DE CONTATO PREMIUM
+-----------------------------*/
+
+/* Container principal */
+.contato-section {
+  max-width: 780px;
+  margin: 60px auto;
+  padding: 28px 45px;
+  background: rgba(20,20,20,0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #f1f1f1;
+  box-shadow: 0 0 35px rgba(0,0,0,0.55);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Título */
+.contato-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Subtítulo */
+.contato-section p {
+  text-align: center;
+  margin-bottom: 25px;
+  opacity: .75;
+  font-size: 16px;
+}
+
+/* Labels */
+.contato-form label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #e8e8e8;
+}
+
+/* Inputs */
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  padding: 14px;
+  background: rgba(40,40,40,0.8);
+  border: 1px solid #444;
+  border-radius: 12px;
+  color: #f8f8f8;
+  font-size: 16px;
+  outline: none;
+  transition: all .25s ease;
+}
+
+/* Placeholder */
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
+  color: #b0b0b0;
+}
+
+/* Focus */
+.contato-form input:focus,
+.contato-form textarea:focus {
+  border-color: #ffd000;
+  background: rgba(55,55,55,0.9);
+  box-shadow: 0 0 8px rgba(255,208,0,0.35);
+}
+
+/* Altura do textarea */
+.contato-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Botão moderno */
+.contato-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #ffd000, #e5b700);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .3s ease;
+}
+
+/* Hover do botão */
+.contato-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255,208,0,0.4);
+}
+
+/* Animação suave */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
